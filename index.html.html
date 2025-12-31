@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELENA ARTEMIS | Street Style Photography</title>
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --panel:#121212;
+      --text:#f4f4f4;
+      --muted:#b9b9b9;
+      --border:#232323;
+      --radius:18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:1024px;
+      margin:0 auto;
+      padding:22px 18px 44px;
+    }
+
+    header{
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      gap:12px;
+      padding:10px 0 18px;
+    }
+
+    a.link{
+      font-size:14px;
+      color:var(--muted);
+      text-decoration:none;
+    }
+    a.link:hover{color:var(--text)}
+
+    .name{
+      font-weight:700;
+      letter-spacing:1.2px;
+      text-align:center;
+      text-transform:uppercase;
+    }
+
+    .left{justify-self:start}
+    .right{justify-self:end}
+
+    .sectionTitle{
+      margin:24px 0 12px;
+      font-size:13px;
+      color:var(--muted);
+      letter-spacing:.6px;
+      text-transform:uppercase;
+    }
+
+    .slider{
+      display:flex;
+      gap:16px;
+      overflow:auto;
+      padding:4px 4px 14px;
+      scroll-snap-type:x mandatory;
+      scroll-behavior:smooth;
+      -webkit-overflow-scrolling:touch;
+    }
+
+    .card{
+      flex:0 0 78%;
+      max-width:560px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      scroll-snap-align:start;
+      cursor:pointer;
+      transition:transform 120ms ease;
+    }
+    .card:active{transform:scale(.99)}
+
+    .thumb{
+      width:100%;
+      aspect-ratio:3/4;
+      background:#1a1a1a;
+      display:block;
+      object-fit:cover;
+    }
+
+    .meta{padding:12px 14px 14px}
+
+    .title{
+      font-weight:700;
+      margin:0 0 6px;
+      font-size:15px;
+      letter-spacing:.4px;
+    }
+
+    .desc{
+      margin:0;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.35;
+    }
+
+    .details{
+      margin-top:10px;
+      padding:14px;
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.4;
+      min-height:70px;
+    }
+
+    .btnRow{
+      display:flex;
+      gap:10px;
+      justify-content:flex-end;
+      margin-top:10px;
+    }
+
+    button{
+      background:transparent;
+      border:1px solid var(--border);
+      color:var(--text);
+      padding:10px 12px;
+      border-radius:14px;
+      cursor:pointer;
+      font-size:14px;
+      font-family: inherit;
+    }
+    button:hover{border-color:#3a3a3a}
+
+    .footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media (min-width:820px){
+      .card{flex:0 0 36%}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="link left" href="mailto:ELENAARTEMIS.04@gmail.com">Contact</a>
+      <div class="name">ELENA ARTEMIS</div>
+      <a class="link right" href="https://www.linkedin.com/in/elena-artemis-314438292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+    </header>
+
+    <div class="sectionTitle" id="work">Street style photography</div>
+
+    <div class="slider" id="slider">
+      <article class="card" data-title="Stone steps portrait" data-desc="Natural light, quiet pose, strong texture in the background.">
+        <img class="thumb" src="photo1.jpeg" alt="Street style photo 1" />
+        <div class="meta">
+          <p class="title">Stone steps portrait</p>
+          <p class="desc">Light, texture, stillness</p>
+        </div>
+      </article>
+
+      <article class="card" data-title="Window reflection" data-desc="Editorial street portrait with reflection and depth.">
+        <img class="thumb" src="photo2.jpeg" alt="Street style photo 2" />
+        <div class="meta">
+          <p class="title">Window reflection</p>
+          <p class="desc">Mood, contrast, depth</p>
+        </div>
+      </article>
+
+      <article class="card" data-title="Street duo" data-desc="Environmental portrait with pattern and presence in the scene.">
+        <img class="thumb" src="photo4.jpeg" alt="Street style photo 4" />
+        <div class="meta">
+          <p class="title">Street duo</p>
+          <p class="desc">Pattern, warmth, character</p>
+        </div>
+      </article>
+
+      <article class="card" data-title="Candid portrait" data-desc="Colour contrast and soft background separation on the street.">
+        <img class="thumb" src="photo5.jpeg" alt="Street style photo 5" />
+        <div class="meta">
+          <p class="title">Candid portrait</p>
+          <p class="desc">Colour, clarity, calm</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="btnRow">
+      <button type="button" id="prev">Prev</button>
+      <button type="button" id="next">Next</button>
+    </div>
+
+    <div class="details" id="details">Tap a photo to see a short note here.</div>
+
+    <div class="footer">
+      Email: <a class="link" href="mailto:ELENAARTEMIS.04@gmail.com">ELENAARTEMIS.04@gmail.com</a>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById("slider");
+    const details = document.getElementById("details");
+    const cards = Array.from(document.querySelectorAll(".card"));
+
+    function setDetails(card){
+      const t = card.getAttribute("data-title") || "";
+      const d = card.getAttribute("data-desc") || "";
+      details.textContent = t + ": " + d;
+      cards.forEach(c => { c.style.outline = "none"; });
+      card.style.outline = "2px solid #2f2f2f";
+      card.style.outlineOffset = "2px";
+    }
+
+    cards.forEach(card => card.addEventListener("click", () => setDetails(card)));
+
+    function scrollByCard(dir){
+      const first = cards[0];
+      const cardWidth = first.getBoundingClientRect().width;
+      const gap = 16;
+      slider.scrollBy({ left: dir * (cardWidth + gap), behavior: "smooth" });
+    }
+
+    document.getElementById("prev").addEventListener("click", () => scrollByCard(-1));
+    document.getElementById("next").addEventListener("click", () => scrollByCard(1));
+
+    setDetails(cards[0]);
+  </script>
+</body>
+</html>
