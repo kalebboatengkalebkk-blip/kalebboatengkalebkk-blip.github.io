@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ELENA ARTEMIS</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #0b0b0b;
+      color: #f4f4f4;
+      font-family: Georgia, Times, serif;
+    }
+
+    .wrap {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 22px 18px 44px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0 18px;
+    }
+
+    a {
+      color: #b9b9b9;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    a:hover {
+      color: #f4f4f4;
+    }
+
+    .name {
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      font-size: 16px;
+    }
+
+    .section {
+      margin: 18px 0 10px;
+      color: #b9b9b9;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    .slider {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 4px 4px 10px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .slide {
+      flex: 0 0 78%;
+      max-width: 560px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #232323;
+      background: #121212;
+      scroll-snap-align: start;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+
+    @media (min-width: 820px) {
+      .slide {
+        flex: 0 0 36%;
+      }
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: #b9b9b9;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="mailto:ELENAARTEMIS.04@gmail.com">Contact</a>
+      <div class="name">ELENA ARTEMIS</div>
+      <a href="https://www.linkedin.com/in/elena-artemis-314438292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+    </header>
+
+    <div class="section">Street style photography</div>
+
+    <div class="slider" aria-label="Photo gallery">
+      <div class="slide"><img src="photo1.jpeg" alt="Street style photo 1" /></div>
+      <div class="slide"><img src="photo2.jpeg" alt="Street style photo 2" /></div>
+      <div class="slide"><img src="photo4.jpeg" alt="Street style photo 3" /></div>
+      <div class="slide"><img src="photo5.jpeg" alt="Street style photo 4" /></div>
+    </div>
+
+    <div class="footer">
+      <a href="mailto:ELENAARTEMIS.04@gmail.com">ELENAARTEMIS.04@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>
